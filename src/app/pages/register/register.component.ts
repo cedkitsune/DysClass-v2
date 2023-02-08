@@ -19,6 +19,8 @@ export class RegisterComponent {
   isSignupFailed: boolean = false;
   // error stockera le message d'erreur éventuel
   errorMessage = '';
+categoryForm: any;
+isSubmitted: any;
 
   constructor(
     private authService: AuthService,
@@ -59,7 +61,9 @@ export class RegisterComponent {
     };
     this.addUser(dataForm.username, dataForm.email, dataForm.password);
   }
-
+ get userForm(){
+  return this.form.controls;
+ }
   private addUser(username: string, email: string, password: string) {
     this.authService.register(username, email, password).subscribe( 
   

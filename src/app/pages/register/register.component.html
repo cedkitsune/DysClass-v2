@@ -9,16 +9,18 @@
 
                 <label for="userName" class="block text-900 font-medium mb-2">Identifiant</label>
                 <input id="userName" formControlName="username" type="text" pInputText class="w-full mb-3" />
-                <small *ngIf="categoryForm['name'].invalid && isSubmitted " class="p-error"> Le mon est
+                <small *ngIf="userForm['username'].invalid && isSubmitted " class="p-error"> l'identifiant est
                                     requis. </small>
 
                 <label for="email" class="block text-900 font-medium mb-2">Email</label>
                 <input id="email" type="email" formControlName="email" pInputText class="w-full mb-3" />
-
+                <small *ngIf="userForm['email'].invalid && isSubmitted " class="p-error"> votre email est
+                requis. </small>
                 <label for="password" class="block text-900 font-medium mb-2">Mot de passe</label>
                 <input id="password" type="password" formControlName="password" pInputText class="w-full mb-3" required
                     minlength="6" maxlength="20" />
-
+                    <small *ngIf="userForm['password'].invalid && isSubmitted " class="p-error"> le mot de passe est
+                        requis. </small>
             </form>
             <!-- bouton valider-->
             <article class="btn">
