@@ -1,0 +1,38 @@
+<header>
+    <img src="assets/Images/DysClassLogo.png" alt="logo">
+    <nav>
+        <ul class="menu">
+            <li><a routerLink="" routerLinkActive="active" aria-current="page" id="accueil">
+                    <fa-icon class="me-1" [icon]="faHouse"></fa-icon>Accueil
+                </a></li>
+            <li><a routerLink="exercice" routerLinkActive="active" id="exercice" aria-current="page">
+                    <fa-icon class="me-1" [icon]="faBook"></fa-icon>Exercice
+                </a></li>
+            <li><a routerLink="contact" routerLinkActive="active" id="contact" aria-current="page">
+                    <fa-icon class="me-1" [icon]="faEnvelope"></fa-icon>Contact
+                </a></li>
+        </ul>
+    </nav>
+    <section class="row">
+        <article class="col">
+            <section ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                    <fa-icon class="me-1" [icon]="faUser"></fa-icon>Connexion
+                </button>
+                <article ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <ul class="connexion">
+                        <li>
+                            <a routerLink="login" routerLinkActive="active" id="login" class="nav-link "
+                                aria-current="page">connecter</a>
+                        </li>
+                        <li>
+                            <a routerLink="register" routerLinkActive="active" id="login" class="nav-link "
+                                aria-current="page">créer un compte</a>
+                        </li>
+                        <li><a id="logout" class="nav-link disabled">Se deconnecter</a></li>
+                    </ul>
+                </article>
+            </section>
+        </article>
+    </section>
+</header>

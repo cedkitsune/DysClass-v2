@@ -1,0 +1,38 @@
+<!-- creation d'un formulaire de contact -->
+<main class="pagecontact">
+    <!-- cote image de la page contact -->
+    <section class="left">
+        <img src="assets/Images/DysClassLogo.png" alt="logo pour le formulaire" class="logof">
+        <div class="images">
+            <img src="assets/Images/pexels-cdc-3992949.jpg" alt="enfants dans une classe" class="enfants">
+            <img src="assets/Images/pexels-emily-ranquist-1205651.jpg" alt="remise de diplome" class="diplome">
+        </div>
+    </section>
+
+    <section class="right">
+        <!-- creation du formulaire-->
+        <p>Nous Contacter</p>
+        <form action="" class="formc">
+            <section class="lastname">
+                <label for="nom">Nom</label><br>
+                <input type="text" name="nom" placeholder="Nom" required>
+            </section>
+            <section class="firstname">
+                <label for="prenom">Prenom</label><br>
+                <input type="text" name="prenom" placeholder="Prenom" required>
+            </section>
+            <section class="email">
+                <label for="email">E-mail</label><br />
+                <input type="email" name="email" placeholder="votre email" required />
+            </section>
+            <section class="message">
+                <label for="message">message</label><br />
+                <textarea name="message" cols="30" rows="10" placeholder="entrez votre message" required>
+                </textarea>
+            </section>  
+            <section class="bouton">
+                <button pButton pRipple type="submit" class="p-button-raised">Envoyer </button>
+            </section>
+        </form>
+    </section>
+</main>
