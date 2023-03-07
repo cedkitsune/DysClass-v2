@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Andika&display=swap");
 
 
-@media  screen and (min-width:768px) {
+@media  screen and (min-width:481px) {
 * {
   margin: 0;
   padding: 0;
@@ -10,24 +10,10 @@
 }
 body {
   font-family: "Andika", sans-serif;
-  background-image: url(assets/Images/papierv1.png) ;
-  /* font-size: 2rem; */
+  /* background-image: url(assets/Images/papierv1.png) ; */
+  background-color: #f8f8ff;
 }
 }
-
-@media screen and (min-width:480px) and (max-width:768px){
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body{
-    background-image: url(assets/Images/papierv1.png);
-    font-family: "Andika", sans-serif;
-    font-size:  1.5rem; 
-  }
-  }
 
 @media screen and (max-width:480px) {
   * {

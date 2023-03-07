@@ -1,31 +1,58 @@
 <main>
-    <div class="card">
+    <section class="card">
         <header>
             <p>Créez un compte</p>
         </header>
+        <article>
+            <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                <section class="inscriptionform">
+                    <label for="login">Identifiant</label>
+                    <input type="text" class="form-control" name="login" [(ngModel)]="form.login" required minlength="6"
+                        maxlength="20" #login="ngModel" />
+                    <div class="alert-danger" *ngIf="login.errors && f.submitted">
+                        <span class="text-danger" *ngIf="login.errors['required']">Identifiant est obligatoire</span>
+                        <span class="text-danger" *ngIf="login.errors['minlength']">
+                            Votre Identifiant doit avoir un minimum de 6 caractere
+                        </span>
+                        <span class="text-danger" *ngIf="login.errors['maxlength']">
+                            Identifiant doit avoir un maximum de 20 caractere
+                        </span>
+                    </div>
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email
+                        #email="ngModel" />
+                    <div class="alert-danger" *ngIf="email.errors && f.submitted">
+                        <span class="text-danger" *ngIf="email.errors['required']">Email obligatoire</span>
+                        <span class="text-danger" *ngIf="email.errors['email']">
+                            Votre Email doit être valide
+                        </span>
+                    </div>
 
-        <section>
-            <form class="inscriptionform" [formGroup]="form">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required
+                        minlength="6" maxlength="16" #password="ngModel" />
+                    <div class="alert-danger" *ngIf="password.errors && f.submitted">
+                        <span class="text-danger" *ngIf="password.errors['required']">mot de passe Obligatoire</span >
+                        <span  class="text-danger" *ngIf="password.errors['minlength']">
+                            Votre mot de passe doit avoir un minimun de 6 caractere
+                        </span >
+                        <span class="text-danger" *ngIf="password.errors['maxlength']">
+                            votre mot de passe depasse les 16 caractere
+                        </span >
+                    </div>
 
-                <label for="userName" class="block text-900 font-medium mb-2">Identifiant</label>
-                <input id="userName" formControlName="username" type="text" pInputText class="w-full mb-3" />
+                    <article class="btns">
+                        <button id="btnin" >S'inscrire</button>
+                    </article>
 
-
-                <label for="email" class="block text-900 font-medium mb-2">Email</label>
-                <input id="email" type="email" formControlName="email" pInputText class="w-full mb-3" />
-
-                <label for="password" class="block text-900 font-medium mb-2">Mot de passe</label>
-                <input id="password" type="password" formControlName="password" pInputText class="w-full mb-3" required
-                    minlength="6" maxlength="20" />
-
+                    <span class="alert alert-warning" *ngIf="f.submitted && isSignupFailed">
+                        Signup failed<br />{{ errorMessage }}
+                    </span>
+                </section>
             </form>
-            <!-- bouton valider-->
-            <article class="btn">
-                <button id="btnin" pButton pRipple type="submit" (click)="onSubmit()" class="p-button-raised">
-                    S'inscrire
-                </button>
-
-            </article>
-        </section>
-    </div>
+            <span class="alert alert-success" *ngIf="isSuccessful">
+                Your registration is successful!
+            </span>
+        </article>
+    </section>
 </main>

@@ -1,1 +1,48 @@
-<p>login works!</p>
+<main>
+    <div class="card">
+        <header>
+            <p>connexion</p>
+        </header>
+
+        <section>
+            <form class="connexionform" *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()"
+                #f="ngForm" novalidate>
+                <label for="email">email</label>
+                <input type="text" class="form-control" name="email" [(ngModel)]="form.email" required
+                    #email="ngModel" />
+                <span class="text-danger" role="alert" *ngIf="email.errors && f.submitted">
+                    email est obligatoire!
+                </span>
+
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required
+                    minlength="6" #password="ngModel" />
+                <div class="text-danger" role="alert" *ngIf="password.errors && f.submitted">
+                    <span *ngIf="password.errors['required']">mot de passe obligatoire</span>
+                    <span *ngIf="password.errors['minlength']">
+                        Le mot de passe doit avoir 6 caractere
+                    </span>
+                </div>
+                <!-- <a routerLink="#" routerLinkActive="active" id="probleme" class="nav-link" aria-current="page">
+                    problème de connexion</a> -->
+
+                <hr>
+                <!-- bouton valider-->
+                <article class="btns">
+                    <button class="btn btn-primary btn-block" id="btnc">
+                        connexion
+                    </button>
+                    <span class="text-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+                        Login failed: {{ errorMessage }}</span>
+
+                    <p class="besoin"> besoin d'un compte ?
+                    <a routerLink="/register" id="login" class="nav-link" routerLinkActive="active">S'inscrire</a></p>
+                </article>
+            </form>
+            <!-- <span class="text-success">
+                Bonjour {{ user.userName}}.
+            </span> -->
+        </section>
+    </div>
+
+</main>

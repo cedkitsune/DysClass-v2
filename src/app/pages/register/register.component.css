@@ -1,20 +1,108 @@
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 480px) {
+  /* center le main pour qui soit au milieu de la page */
   main {
+    font-family: "Andika", sans-serif;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:50px;
+  }
+  /* taille, position couleur de fond de carte et couleur du texte  */
+  .card {
+    border-radius: 15px;
+    width: 90vw;
+    height: auto;
+    background-color: #f8f8f8;
+    color: #2b353e;
+  }
+  /* couleur dufond de headerde la carte, du ligne du bas du header et position du header par rapport a la carte */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    height: 10vh;
+    font-size: 1.5rem;
+    border-radius: 15px 15px 0 0;
+    background-color: #ff949f;
+  }
+  /* taille de la police espace avec l'oject dessus */
+  p {
+    padding-top: 10px;
+  }
+  /* positionnement et aspect visuel du form inscription  */
+  .inscriptionform {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+  label {
+    margin-top: 10px;
+    color: #2b353e;
+    margin-left: 15px;
+    font-size: 1.35rem;
+  }
+
+  input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+
+  span {
+    font-size: 0.90rem;
+    margin-left: 15px;
+  }
+  /* positionnement,taille et designe du bouton validation  */
+  .btns {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #btnin {
+    font-size: 1rem;
+    width: 90%;
+    height: 5vh;
+    background-color: #77dd77;
+    color: #2b353e;
+    border: #77dd77 1px solid;
+    border-radius: 50px;
+    margin-bottom: 5px;
+  }
+
+  #btnin:hover {
+    background-color: #ff949f;
+    color: #f8f8f8;
+    border: #ff949f 1px solid;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  /* center le main pour qui soit au milieu de la page */
+  main {
+    font-family: "Andika", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-
+  /* taille, position couleur de fond de carte et couleur du texte  */
   .card {
     border-radius: 15px;
     margin-top: 25px;
     width: 40vw;
-    height: 73vh;
+    height: auto;
     background-color: #f8f8f8;
     color: #2b353e;
   }
-
+  /* couleur dufond de headerde la carte, du ligne du bas du header et position du header par rapport a la carte */
   header {
     display: flex;
     justify-content: center;
@@ -25,12 +113,12 @@
     border-bottom: 2px #2b353e;
     background-color: #ff949f;
   }
-
+  /* taille de la police espace avec l'oject dessus */
   p {
     padding-top: 3px;
     font-size: 1.5rem;
   }
-  /* positionnement et aspect visuel du form inscription */
+  /* positionnement et aspect visuel du form inscription  */
   .inscriptionform {
     display: flex;
     flex-direction: column;
@@ -51,8 +139,11 @@
     border-radius: 5px;
     background-color: #f8f8f8;
   }
-
-  /* positionnement  du boutons valider  */
+  span {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  /* positionnement,taille et designe du bouton validation  */
   article {
     display: flex;
     justify-content: center;
@@ -67,196 +158,16 @@
 
   #btnin {
     font-size: 1.1rem;
-    width: 8vw;
+    width: 25vw;
     height: 5vh;
     background-color: #77dd77;
     color: #2b353e;
     border: #77dd77 1px solid;
+    border-radius: 50px;
   }
   #btnin:hover {
-    width: 8vw;
-    height: 5vh;
     background-color: #ff949f;
     color: #f8f8f8;
     border: #ff949f 1px solid;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card {
-    border-radius: 15px;
-    margin-top: 75px;
-    width: 70vw;
-    height: 60vh;
-    background-color: #f8f8f8;
-    color: #2b353e;
-  }
-
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    height: 6vh;
-    border-radius: 15px 15px 0 0;
-    border-bottom: 2px #2b353e;
-    background-color: #ff949f;
-  }
-
-  p {
-    font-size: 1.5rem;
-    padding-top: 3px;
-  }
-
-  .inscriptionform {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-  }
-  label {
-    color: #2b353e;
-    font-size: 1.2rem;
-  }
-
-  input {
-    width: 55vw;
-    height: 3vh;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    margin-bottom: 50px;
-  }
-
-  .btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-  }
-
-  #btnin {
-    font-size: 1rem;
-    height: 3vh;
-    width: 15vw;
-    padding-left: 25px;
-    background-color: #77dd77;
-    color: #2b353e;
-    border: #77dd77 1px solid;
-  }
-
-  #btnin:hover {
-    font-size: 1rem;
-    height: 3vh;
-    width: 15vw;
-    padding-left: 25px;
-    background-color: #ff949f;
-    color: #f8f8f8;
-    border: #ff949f 1px solid;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card {
-    border-radius: 15px;
-    margin-top: 25px;
-    width: 60vw;
-    height: auto;
-    background-color: #f8f8f8;
-    color: #2b353e;
-  }
-
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    height: 6vh;
-    border-radius: 15px 15px 0 0;
-    border-bottom: 2px #2b353e;
-    background-color: #ff949f;
-  }
-
-  p {
-    font-size: 1.2rem;
-    padding-top: 3px;
-  }
-
-  .inscriptionform {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-  }
-  label {
-    color: #2b353e;
-    margin-left: 15px;
-    font-size: 0.65rem;
-  }
-
-  input {
-    margin-left: 15px;
-    width: 55vw;
-    height: 3vh;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-  }
-
-  .btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-
-  #btnins {
-    display: inline-block;
-    font-size: 0.85rem;
-    width: 45vw;
-    background-color: #77dd77;
-    color: #2b353e;
-    border: #77dd77 1px solid;
-    margin-bottom: 5px;
-  }
-
-  #btnins:hover {
-    display: inline-block;
-    width: 45vw;
-    background-color: #ff949f;
-    color: #f8f8f8;
-    border: #ff949f 1px solid;
-  }
-
-  .googletext {
-    font-size: 0.6rem;
-    text-align: center;
-  }
-
-  #btng {
-    color: #f8f8f8;
-    width: 45vw;
-    font-size: 0.85rem;
-    display: inline-block;
-    background-color: #dd4b39;
-    border: #dd4b39 1px solid;
-  }
-
-  #btng:hover {
-    background-color: #f8f8f8;
-    width: 45vw;
-    color: #dd4b39;
-  }
-
-  fa-icon {
-    padding-left: 1px;
   }
 }

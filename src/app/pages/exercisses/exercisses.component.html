@@ -1,0 +1,45 @@
+<main>
+    <section class="container">
+        <!-- carte titre et matiere -->
+        <section class="topcadre">
+            <article class="matiere"> Français </article>
+            <article class="titre"> Les sons [o] </article>
+        </section>
+
+        <!-- carte question et bouton valider -->
+        <article class="formgroup">
+            <section class="containerex">
+                <p>
+                    <fa-icon [icon]="faCircleChevronRight"></fa-icon> Mettre le son [o] correspondant (eau, au, o, ô).
+                </p>
+                <article class="question">
+                    <p class="quest">bat<input type="text" pInputText> <!--[(ngModel)]="value1"-->
+                        <span class="ml-2"></span>
+                    </p><!--{{value1}}-->
+                    <p class="quest">m<input type="text" pInputText> <!--[(ngModel)]="value1"--><span
+                            class="ml-2"></span> t<input type="text" pInputText> <!--[(ngModel)]="value1"-->
+                        <span class="ml-2"></span>
+                    </p>
+                    <p class="quest"><input type="text" pInputText> <!--[(ngModel)]="value1"-->
+                        <span class="ml-2"></span>truche
+                    </p>
+                    <p class="quest">escarg<input type="text" pInputText> <!--[(ngModel)]="value1"-->
+                        <span class="ml-2"></span>t
+                    </p>
+                    <p class="quest">f<input type="text" pInputText> <!--[(ngModel)]="value1"-->
+                        <span class="ml-2"></span>teuil
+                    </p>
+                    <p class="quest">t<input type="text" pInputText> <!--[(ngModel)]="value1"-->
+                        <span class="ml-2"></span>mate
+                    </p>
+                    <p class="quest">r<input type="text" pInputText> <!--[(ngModel)]="value1"-->
+                        <span class="ml-2"></span>binet
+                    </p>
+                </article>
+            </section>
+            <section class="validation">
+                <button id="btnv" pButton pRipple type="submit" class="p-button-raised"> Valider </button>
+            </section>
+        </article>
+    </section>
+</main>

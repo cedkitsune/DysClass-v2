@@ -1,0 +1,223 @@
+@media screen and (max-width: 480px) {
+  /* center le main pour qui soit au milieu de la page */
+  main {
+    font-family: "Andika", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* taille, position couleur de fond de carte et couleur du texte  */
+
+  .card {
+    border-radius: 15px;
+    margin-top: 50px;
+    width: 75vw;
+    height: 75vh;
+    background-color: #f8f8f8;
+    color: #2b353e;
+  }
+  /* couleur dufond de headerde la carte, du ligne du bas du header et position du header par rapport a la carte */
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    height: 10vh;
+    font-size: 1.5rem;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 2px #2b353e;
+    background-color: #ff949f;
+  }
+
+  /* taille de la police espace avec l'oject dessus */
+  p {
+    padding-top: 3px;
+  }
+  /* positionnement et aspect visuel du form inscription  */
+  .connexionform {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    height: 30vh;
+  }
+
+  label {
+    margin-top: 10px;
+    color: #2b353e;
+    margin-left: 15px;
+    font-size: 1.35rem;
+  }
+
+  input {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: auto;
+    font-size: 1.35rem;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  span{
+    margin-left: 15px;
+  }
+  /* position et design du lien probleme */
+  /* #probleme {
+    align-self: start;
+    margin-left: 10px;
+    color: blue;
+    font-size: 0.8rem;
+    text-align: right;
+    margin-bottom: 35px;
+  }
+  #probleme :hover {
+    cursor: pointer;
+  } */
+  /* position, designe, taille du bouton valider et lien inscription  */
+  .btns {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #btnc {
+    font-size: 1.1rem;
+    width: 90%;
+    height: 5vh;
+    background-color: #77dd77;
+    color: #2b353e;
+    border: #77dd77 1px solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  #btnc:hover {
+    padding-bottom: 3px;
+    background-color: #ff949f;
+    color: #f8f8f8;
+    border: #ff949f 1px solid;
+    border-radius: 10px;
+  }
+  /* lien insrciption */
+  .besoin {
+    display: flex;
+    margin-top: 2px;
+    font-size: 0.85rem;
+  }
+  #login {
+    margin-left:5px;
+    font-size: 0.85rem;
+  }
+
+  #login:hover {
+    cursor: pointer;
+    color: #ff949f;
+  }
+}
+
+
+@media screen and (min-width: 481px) {
+  main {
+    font-family: "Andika", sans-serif;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    border-radius: 15px;
+    margin-top: 15px;
+    width: 40vw;
+    height: 75vh;
+    background-color: #f8f8f8;
+    color: #2b353e;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    height: 6vh;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 2px #2b353e;
+    background-color: #ff949f;
+  }
+
+  p {
+    padding-top: 3px;
+    font-size: 1.5rem;
+  }
+  .connexionform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  label {
+    margin-top: 30px;
+    color: #2b353e;
+    font-size: 1.25rem;
+  }
+
+  input {
+    width: 25vw;
+    height: 5vh;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    margin-top: 10px;
+  }
+  /* position et design du lien probleme */
+  #probleme {
+    align-self: start;
+    margin-left: 115px;
+    color: blue;
+    font-size: 0.85rem;
+    text-align: right;
+    margin-bottom: 25px;
+  }
+  #probleme :hover {
+    cursor: pointer;
+  }
+  /* position, designe, taille du bouton valider et lien inscription  */
+  .btns {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #btnc {
+    font-size: 1.1rem;
+    width: 25vw;
+    height: 5vh;
+    padding-bottom: 3px;
+    background-color: #77dd77;
+    color: #2b353e;
+    border: #77dd77 1px solid;
+    border-radius: 10px;
+    margin-bottom: 5px;
+  }
+  #btnc:hover {
+    padding-bottom: 3px;
+    background-color: #ff949f;
+    color: #f8f8f8;
+    border: #ff949f 1px solid;
+    border-radius: 10px;
+  }
+  /* lien insrciption */
+  .besoin {
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  #login {
+    font-size: 1rem;
+  }
+
+  #login:hover {
+    cursor: pointer;
+    color: #ff949f;
+  }
+}

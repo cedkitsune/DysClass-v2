@@ -1,303 +1,203 @@
-@media screen and (min-width: 768px) {
-    /* designe de la carte contact */
-    .pagecontact {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      background-color: #f8f8ff;
-      border: solid 1px #2b353e;
-      border-radius: 25px;
-      box-shadow: 1px 1px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 60vw;
-      height: 80vh;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-    }
-    /* positionement et taille des photos et logo */
-    .right {
-      border-left: #2b353e solid 3px;
-      border-radius: 0 75px 75px 0px;
-    }
-  
-    .logof {
-      width: 15vw;
-      height: 10vh;
-    }
-    .formc {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .images {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 25px;
-    }
-    .enfants {
-      width: 25vw;
-      height: 25vh;
-    }
-    .diplome {
-      width: 25vw;
-      height: 25vh;
-    }
-    p {
-      text-align: center;
-      font-size: 1.75rem;
-      height: 7.5vh;
-      background-color: #ff949f;
-      border-bottom: #2b353e solid 1px;
-      border-radius: 0 25px 0 0;
-    }
-    /* position et look pour le block form de contact */
-    .left {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 25px;
-    }
-  
-    label {
-      margin-bottom: 3px;
-    }
-    .lastname input,
-    .email input {
-      width: 20vw;
-      background-color: #77dd77;
-      border: solid 1px #2b353e;
-      border-radius: 7.5px;
-      margin-bottom: 10px;
-      padding-left: 5px;
-    }
-  
-    .firstname input {
-      width: 20vw;
-      background-color: #ff949f;
-      border: solid 1px #2b353e;
-      border-radius: 7.5px;
-      margin-bottom: 10px;
-      padding-left: 5px;
-    }
-  
-    .message textarea {
-      width: 20vw;
-      height: 20vh;
-      font-size: 0.90;
-      border: solid 1px #2b353e;
-      border-radius: 2px;
-      margin-bottom: 25px;
-    }
-  
-    .p-button-raised {
-      display: inline-block;
-      width: 20vw;
-      color: #2b353e;
-      background-color: #77dd77;
-      border: solid 1px #2b353e;
-    }
-  
-    .p-button-raised:hover {
-      background-color: #ff949f;
-      border: #2b353e solid 1px;
-      color: #f8f8ff;
+@media screen and (max-width: 480px) {
+  main {
+    font-family: "Andika", sans-serif;
   }
-  }
-  
-  @media screen and (min-width: 481px) and (max-width: 768px) {
-    .pagecontact {
-      border: #2b353e 3px solid;
-      border-radius: 25px 25px 25px 25px;
-      width: 95vw;
-      height: auto;
-      margin-left: 15px;
-      margin-top: 75px;
-      display: flex;
-      flex-direction: column-reverse;
-      background-color: #f8f8ff;
-    }
-  
-    .logof {
-      display: none;
-    }
-    .images{
-      display: flex;
-  
-    }
-    
-    .enfants {
-      border-right: #2b353e 1px solid;
-      border-radius: 0 0 0 25px;
-      height: 25vh;
-      width: 47.15vw;
-    }
-    .diplome {
-      border-left: #2b353e 1px solid;
-      border-radius: 0 0 25px 0;
-      height: 25vh;
-      width: 47.15vw;
-    }
-  
-    .formc {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-left: 15px;
-      border-bottom: #2b353e 2px solid;
-    }
-    p {
-      font-size: 1.2rem;
-      text-align: center;
-      background-color: #77dd77;
-      border-radius: 25px 25px 0 0;
-      height: 3vh;
-    }
-  
-    .lastname input,
-    .email input {
-      width: 60vw;
-      padding-left: 5px;
-      background-color: #ff949f;
-      border: #ff949f 1px solid;
-      border-radius: 15px;
-      margin-bottom: 3px;
-    }
-  
-    .firstname input {
-      width: 60vw;
-      padding-left: 5px;
-      background-color: #77dd77;
-      border: #77dd77 1px solid;
-      border-radius: 15px;
-      margin-bottom: 3px;
-    }
-  
-    .message textarea {
-      background-color: #f8f8ff;
-      border: lightgrey 1px solid;
-      width: 60vw;
-      height: 10vh;
-      margin-bottom: 15px;
-    }
-    .bouton {
-      display: inline-block;
-      margin-bottom: 15px;
-    }
-  
-    .p-button-raised {
-      height: 3vh;
-      background-color: #77dd77;
-      border: #77dd77 1px solid;
-    }
-    .p-button-raised:hover {
-      height: 3vh;
-      color: #2b353e;
-      background-color: #ff949f;
-      border: #ff949f 1px solid;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    
-    .pagecontact {
-      border: #2b353e 3px solid;
-      border-radius: 25px 25px 25px 25px;
-      width: 95vw;
-      height: auto;
-      margin-left: 15px;
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column-reverse;
-      background-color: #f8f8ff;
-    }
-  
-    .logof {
-      display: none;
-    }
-  .images{
+  /* taille et position de la carte */
+  .pagecontact {
+    border: #2b353e 3px solid;
+    border-radius: 25px;
+    width: 95vw;
+    height: auto;
+    margin: 50px 15px 0;
+    background-color: #f8f8ff;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-    .enfants {
-      border-right: #2b353e 1px solid;
-      border-radius: 0 0 0 25px;
-      height: 25vh;
-      width: 47vw;
-    }
-    .diplome {
-      border-left: #2b353e 1px solid;
-      border-radius: 0 0 25px 0;
-      height: 25vh;
-      width: 47vw;
-    }
-  
-    .formc {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-left: 15px;
-      border-bottom: #2b353e 2px solid;
-    }
-    p {
-      text-align: center;
-      background-color: #77dd77;
-      border-radius: 25px 25px 0 0;
-      height: 4vh;
-    }
-  
-    label{
-      font-size: 0.65rem;
-    }
-  
-    .lastname input,
-    .email input {
-      width: 50vw;
-      padding-left: 5px;
-      background-color: #ff949f;
-      border: #ff949f 1px solid;
-      border-radius: 15px;
-      margin-bottom: 3px;
-      font-size: 0.75rem;
-    }
-  
-    .firstname input {
-      width: 50vw;
-      padding-left: 5px;
-      background-color: #77dd77;
-      border: #77dd77 1px solid;
-      border-radius: 15px;
-      margin-bottom: 3px;
-      font-size: 0.75rem;
-    }
-  
-    .message textarea {
-      background-color: #f8f8ff;
-      border: lightgrey 1px solid ;
-      width: 50vw;
-      height: 10vh;
-      margin-bottom: 15px;
-      font-size: 0.75rem;
-    }
-    .bouton {
-      display: inline-block;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-  
-    .p-button-raised {
-      height: 3vh;
-      background-color: #77dd77;
-      border: #77dd77 1px solid;
-    }
-    .p-button-raised:hover {
-      height: 3vh;
-      color: #2b353e;
-      background-color: #ff949f;
-      border: #ff949f 1px solid;
-    }
+
+  .logof ,.images{
+    display: none;
   }
   
+  .formc {
+    padding-left: 15px;
+  }
+
+  p {
+    width: 94vw;
+    font-size: 1.1rem;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #77dd77;
+    border-radius: 25px 25px 0 0;
+    height: 6vh;
+  }
+
+  label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .lastname input,
+  .email input {
+    width: 95%;
+    padding: 10px;
+    background-color: #ff949f;
+    border: #ff949f 1px solid;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+
+  .firstname input {
+    width: 95%;
+    padding: 10px;
+    background-color: #77dd77;
+    border: #77dd77 1px solid;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+
+  .message textarea {
+    background-color: #f8f8ff;
+    border: lightgrey 1px solid;
+    width: 95%;
+    height: 15vh;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+
+  .btng {
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+
+  #btn {
+    font-size: 1.1rem;
+    width: 95%;
+    height: 5vh;
+    background-color: #77dd77;
+    color: #2b353e;
+    border: #77dd77 1px solid;
+    border-radius: 50px;
+    margin-bottom: 5px;
+  }
+
+  #btn:hover {
+    background-color: #ff949f;
+    color: #f8f8f8;
+    border: #ff949f 1px solid;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  main {
+    font-family: "Andika", sans-serif;
+  }
+  /* designe de la carte contact */
+  .pagecontact {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f8ff;
+    border: solid 1px #2b353e;
+    border-radius: 25px;
+    box-shadow: 1px 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  /* positionement et taille des photos et logo */
+  .right {
+    border-left: #2b353e solid 3px;
+    border-radius: 0 75px 75px 0px;
+  }
+
+  .logof {
+    width: 15vw;
+    height: 10vh;
+  }
+  .formc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .enfants {
+    width: 25vw;
+    height: 25vh;
+  }
+  .diplome {
+    width: 25vw;
+    height: 25vh;
+  }
+  p {
+    text-align: center;
+    font-size: 1.75rem;
+    height: 7.5vh;
+    background-color: #ff949f;
+    border-bottom: #2b353e solid 1px;
+    border-radius: 0 25px 0 0;
+  }
+  /* position et look pour le block form de contact */
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  label {
+    margin-bottom: 3px;
+  }
+  .lastname input,
+  .email input {
+    width: 20vw;
+    border: solid 1px #2b353e;
+    border-radius: 7.5px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+  }
+
+  .message textarea {
+    width: 20vw;
+    height: 20vh;
+    font-size: 0.9;
+    border: solid 1px #2b353e;
+    border-radius: 2px;
+    margin-bottom: 25px;
+  }
+
+  .btng {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #btn {
+    font-size: 1.1rem;
+    width: 15vw;
+    height: 5vh;
+    background-color: #77dd77;
+    color: #2b353e;
+    border: #77dd77 1px solid;
+    border-radius: 50px;
+  }
+  #btn:hover {
+    background-color: #ff949f;
+    color: #f8f8f8;
+    border: #ff949f 1px solid;
+  }
+}

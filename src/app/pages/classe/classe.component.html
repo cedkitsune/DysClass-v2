@@ -1,16 +1,21 @@
 <main>
     <section class="sidebar">
         <article>
-            <ul class="link">
-                <li><a>
-                        <fa-icon [icon]="faChalkboardUser"></fa-icon> Plan de travail
-                    </a></li>
-                <li><a>
-                        <fa-icon [icon]="faUserGear"></fa-icon> Gestion de classe
-                    </a></li>
-                <li><a>
-                        <fa-icon [icon]="faGears"></fa-icon> Paramètre du compte
-                    </a></li>
+            <ul class="menu">
+                <li>
+                    <a routerLink="/exerciceliste" routerLinkActive="active" aria-current="page">
+                        <fa-icon [icon]="faBook"></fa-icon> Exercices
+                    </a>
+                </li>
+                <!-- <li>
+                    <a>
+                        <fa-icon [icon]="faUserGear"></fa-icon> Eleves
+                    </a>
+                </li> -->
+                <li><a routerLink="/compte" routerLinkActive="active" aria-current="page">
+                        <fa-icon [icon]="faGears"></fa-icon>Mon compte
+                    </a>
+                </li>
             </ul>
         </article>
     </section>
