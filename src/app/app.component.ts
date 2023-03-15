@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgcCookieConsentService } from 'ngx-cookieconsent';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DysClass';
+  constructor(private ngCookieService:NgcCookieConsentService ){
+
+  }
+  ngOnInit(){
+    this.ngCookieService.init(this.ngCookieService.getConfig())
+ }
 }

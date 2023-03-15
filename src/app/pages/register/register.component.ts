@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
   isSignupFailed = false;
   errorMessage ='';
   
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,) { }
   
   onSubmit(): void{
     const { login, email, password } = this.form;
@@ -37,6 +37,7 @@ export class RegisterComponent implements OnInit {
         // console.log(data);
         this.isSuccessful = true;
         this.isSignupFailed = false;
+        window.location.href=" ";
       },
       err=> {
         // console.error(err);

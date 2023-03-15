@@ -1,0 +1,107 @@
+/* Styles pour les écrans mobiles */
+@media screen and (max-width:480px) {
+  
+
+main{
+  font-family: "Andika", sans-serif;
+  font-size: 1.2rem;
+}
+.card {
+  margin: 10px;
+  height: 50vh;
+}
+
+.inscriptionform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login,
+.email,
+.yes,
+.no {
+  margin-bottom: 15px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.update,
+.delete {
+  margin: 0 5px;
+}
+.update{
+  color: #2b353e;
+  background-color: #77dd77;
+  border: #77dd77;
+  border-radius: 5px;
+}
+.delete{
+  color: #2b353e;
+  background-color: #ff949f;
+  border: #ff949f;
+  border-radius: 5px;
+  padding-bottom: 2px;
+}
+}
+
+/* Styles pour les écrans de bureau */
+@media screen and (min-width: 481px) {
+  main{
+    font-family: "Andika", sans-serif;
+    font-size: 1.25rem; 
+
+  }
+  .card {
+    margin: 50px auto;
+    width: 40vw;
+    height: 50vh;
+  }
+
+  .inscriptionform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login,
+  .email,
+  .yes,
+  .no {
+    margin: 15px;
+  }
+
+  .yes,
+  .no {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 20px;
+  }
+
+  .btns {
+    display: flex;
+  justify-content: center;
+    margin-top: 20px;
+  }
+  .update{
+    margin-right: 10px;
+    color: #2b353e;
+    background-color: #77dd77;
+    border: #77dd77;
+    width: 5vw;
+    border-radius: 5px;
+  }
+  .delete{
+    margin-left: 10px;
+    color: #2b353e;
+    background-color: #ff949f;
+    border: #ff949f;
+    border-radius: 5px;
+    width: 7vw ;
+    padding-bottom: 2px;
+  }
+}

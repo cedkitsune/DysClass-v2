@@ -28,5 +28,4 @@ export class ExerciceformComponent {
 
   onSubmit(): void {
     console.log(this.exerciseForm.value);
-  }
-}
+  }}

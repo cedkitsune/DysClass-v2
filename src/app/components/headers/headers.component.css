@@ -24,7 +24,9 @@
   .menu {
     list-style-type: none;
   }
-
+  fa-icon {
+    display: none;
+  }
   #accueil,
   #contact,
   #exercice,
@@ -34,9 +36,7 @@
     text-decoration: none;
   }
 
-  fa-icon {
-    display: none;
-  }
+
 
   #dropdownBasic1 {
     font-size: 0.75rem;

@@ -18,7 +18,7 @@ export class AuthService {
     return this.http.post(AUTH_APIE + 'login', { email, password }, httpOptions);
   }
   register(userName: string, email:string, password: string): Observable<User> {
-    console.log(userName, email, password);
+    // console.log(userName, email, password);
     return this.http.post(AUTH_APIE + "register", { userName, email, password}, httpOptions);
   }
 }

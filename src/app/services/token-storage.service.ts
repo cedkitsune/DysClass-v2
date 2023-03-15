@@ -24,7 +24,7 @@ export class TokenStorageService {
 
   //cette méthode récupère le token du user connecté dans le sessionsStorage
   public getToken(): string | null {
-    console.log(sessionStorage)
+    // console.log(sessionStorage)
     return window.sessionStorage.getItem(TOKEN_KEY);
   }
 

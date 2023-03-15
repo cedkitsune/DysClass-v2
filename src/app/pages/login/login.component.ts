@@ -13,6 +13,11 @@ export class LoginComponent implements OnInit {
     email: null,
     password: null,
   };
+  // Regex pour valider le champ d'email
+  emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  // Regex pour valider le champ de mot de passe
+  passwordRegex = /^(?!.*[<>])[a-zA-Z0-9*/+.=@çèéà'&()-]{6,}$/;
   //isLoggedIn dira si un user est connecté grâce au token récupéré dans sessionStorage
   isLoggedIn = false;
   //isLoginFailed dira si le login a échoué
@@ -27,7 +32,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private tokenStorage: TokenStorageService,
-    private router: Router  ) {}
+    private router: Router
+  ) {}
 
   //au chargement, on définit les valeurs de chaque variable définie plus haut
   ngOnInit(): void {
@@ -35,11 +41,10 @@ export class LoginComponent implements OnInit {
       this.admin = this.tokenStorage.getUser().admin;
       this.user = this.tokenStorage.getUser();
       // console.log(this.user.userName);
-      
     }
   }
   //quand le formulaire est soumis, grâce à AuthService, on envoie une requête vers le back qui contient
-  //dans son body un email et un password. On récupère un token et les informations du user qui tente de se 
+  //dans son body un email et un password. On récupère un token et les informations du user qui tente de se
   //connecter si tout va bien, sinon, un message d'erreur
   onSubmit() {
     const { email, password } = this.form;
@@ -48,13 +53,13 @@ export class LoginComponent implements OnInit {
         this.tokenStorage.saveToken(data.message.token);
         this.tokenStorage.saveUser(data.message.user);
         // console.log(data);
-        
+
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-        
+
         // this.admin = this.tokenStorage.getUser().user.admin;
-        this.user = this.tokenStorage.getUser()
-        window.location.href="../classe"
+        this.user = this.tokenStorage.getUser();
+        window.location.href = '../classe';
         // window.location.reload();
       },
       (err) => {

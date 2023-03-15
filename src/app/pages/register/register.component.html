@@ -32,27 +32,28 @@
                     <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required
                         minlength="6" maxlength="16" #password="ngModel" />
                     <div class="alert-danger" *ngIf="password.errors && f.submitted">
-                        <span class="text-danger" *ngIf="password.errors['required']">mot de passe Obligatoire</span >
-                        <span  class="text-danger" *ngIf="password.errors['minlength']">
+                        <span class="text-danger" *ngIf="password.errors['required']">mot de passe Obligatoire</span>
+                        <span class="text-danger" *ngIf="password.errors['minlength']">
                             Votre mot de passe doit avoir un minimun de 6 caractere
-                        </span >
+                        </span>
                         <span class="text-danger" *ngIf="password.errors['maxlength']">
                             votre mot de passe depasse les 16 caractere
-                        </span >
+                        </span>
                     </div>
 
                     <article class="btns">
-                        <button id="btnin" >S'inscrire</button>
+                        <button id="btnin">S'inscrire</button>
                     </article>
 
                     <span class="alert alert-warning" *ngIf="f.submitted && isSignupFailed">
-                        Signup failed<br />{{ errorMessage }}
+                        il y a eut une erreur dans la création de votre compte <br />{{ errorMessage }}
+                    </span>
+                    <span class="alert alert-success" *ngIf="isSuccessful">
+                        votre compte a été créer
                     </span>
                 </section>
             </form>
-            <span class="alert alert-success" *ngIf="isSuccessful">
-                Your registration is successful!
-            </span>
+
         </article>
     </section>
 </main>

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { faUser} from '@fortawesome/free-solid-svg-icons'
-import { faChalkboardUser } from '@fortawesome/free-solid-svg-icons';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 
 @Component({
@@ -18,13 +18,12 @@ export class HeadersComponent {
   faEnvelope = faEnvelope;
   faBook = faBook;
   faUser = faUser;
-  faChalkboardUser = faChalkboardUser;
 
   user: any = {};
   isLoggedIn = false;
 
   constructor(
-  private tokenStorage: TokenStorageService,){}
+  private tokenStorage: TokenStorageService, private router: Router){}
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
@@ -32,19 +31,14 @@ export class HeadersComponent {
       this.isLoggedIn = true;
       this.user = this.tokenStorage.getUser();
       // console.log(this.user.userName);
-      
     }
   }
-
-
-
-  onSubmit(){
-    
-  }
+  onSubmit(){}
 
   logOut(): void {
     this.tokenStorage.signOut();
-    window.location.href="../home";
+    window.location.reload();
+    window.location.href = '';
   }
 };
 

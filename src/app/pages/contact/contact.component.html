@@ -12,10 +12,10 @@
     <section class="right">
         <!-- creation du formulaire-->
         <p>Nous Contacter</p>
-        <form action="" class="formc">
+        <form  class="formc">
             <section class="lastname">
-                <label for="nom">Identifiant</label><br>
-                <input type="text" name="nom" placeholder="Nom" required>
+                <label for="name">Identifiant</label><br>
+                <input type="text" formControlname="name" placeholder="name" required>
             </section>
             <section class="email">
                 <label for="email">E-mail</label><br />
@@ -27,7 +27,7 @@
                 </textarea>
             </section>  
             <article class="btng">
-                <button id="btn" >envoyer</button>
+                <button type="submit" id="btn" >envoyer</button>
             </article>
         </form>
     </section>

@@ -1,0 +1,48 @@
+<main>
+    <section class="card">
+        <article>
+            <form name="form" #f="ngForm" novalidate>
+                <section class="inscriptionform">
+                    <article class="login">
+                    <label for="login">Identifiant</label>
+                    <input type="text" class="form-control" name="login" [(ngModel)]="form.login" required minlength="6"
+                        maxlength="20" #login="ngModel" />
+                    </article>
+                    <article class="email">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email
+                        #email="ngModel" />
+                  </article>
+                  <article class="yes">
+                    <label for="isAdmin">admin</label>
+                    <input  type="radio" value="true" id="yes" name="isAdmin" [(ngModel)]="form.isAdmin" required isAdmin
+                        #isAdmin="ngModel" />
+                </article>
+                <article class="no">
+                    <label for="isAdmin">utilisateur</label>
+                    <input  type="radio" value="false" id="no" name="isAdmin" [(ngModel)]="form.isAdmin" required isAdmin
+                        #isAdmin="ngModel" />
+                </article>
+                
+                    
+                    <article class="btns">
+                        <button class="update" type="submit" (click)="updateUser()">editer</button>
+                        <button class="delete" type="submit " (click)="deleteEnseignant(form._id)">supprimer</button>
+                    </article>
+                   
+                </section>
+            </form>
+
+        </article>
+    </section>
+</main><!-- <label for="password">Mot de passe</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required
+                        minlength="6" maxlength="16" #password="ngModel" />
+                    <div class="alert-danger" *ngIf="password.errors && f.submitted">
+                        <span class="text-danger" *ngIf="password.errors['required']">mot de passe Obligatoire</span >
+                        <span  class="text-danger" *ngIf="password.errors['minlength']">
+                            Votre mot de passe doit avoir un minimun de 6 caractere
+                        </span >
+                        <span class="text-danger" *ngIf="password.errors['maxlength']">
+                            votre mot de passe depasse les 16 caractere -->
+                    <!-- </span > --> <!-- </div> -->

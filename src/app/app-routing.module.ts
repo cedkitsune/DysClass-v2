@@ -6,7 +6,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ClasseComponent } from './pages/classe/classe.component';
 import { CGUComponent } from './pages/cgu/cgu.component';
-import { MentionlegalesComponent } from './pages/mentionlegales/mentionlegales.component';
 import { RgpdComponent } from './pages/rgpd/rgpd.component';
 import { ExercissesComponent } from './pages/exercisses/exercisses.component';
 import { Error404Component } from './pages/error404/error404.component';
@@ -25,7 +24,6 @@ const routes: Routes = [
 { path: "contact",component:ContactComponent},
 { path: "classe",component:ClasseComponent},
 { path: "cgu", component:CGUComponent},
-{ path: "mention",component:MentionlegalesComponent},
 { path: "rgpd", component:RgpdComponent},
 { path: "exercisses", component:ExercissesComponent},
 { path: "compte",component:CompteComponent},

@@ -6,12 +6,12 @@
     margin-top: 15px;
     margin-bottom: 25px;
     margin-left: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .tableau {
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 25px;
     background-color: #2b353e;
     border: #582900 10px ridge;
@@ -21,7 +21,7 @@
   .lienuti {
     color: #f8f8ff;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .info {
     color: #f8f8ff;
@@ -80,11 +80,11 @@
   }
   /* taille, position et deco block tableau */
   .tableau {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-left: 25px;
     padding-left: 45px;
     width: 40vw;
-    height: 40vh;
+    height: auto;
     background-color: #2b353e;
     border: #582900 10px ridge;
     border-radius: 15px;
@@ -108,7 +108,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
+    grid-column-gap: 15px;
     grid-row-gap: 10px;
     margin-right: 15px;
   }
